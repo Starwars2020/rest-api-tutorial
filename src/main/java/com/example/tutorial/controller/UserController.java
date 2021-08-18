@@ -53,7 +53,6 @@ public class UserController {
     user.setEmail(userDetails.getEmail());
     user.setLastName(userDetails.getLastName());
     user.setFirstName(userDetails.getFirstName());
-    user.setUpdatedAt(new Date());
     final User updatedUser = userRepository.save(user);
     return ResponseEntity.ok(updatedUser);
   }
