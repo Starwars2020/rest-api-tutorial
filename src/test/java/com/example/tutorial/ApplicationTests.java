@@ -1,6 +1,6 @@
 package com.example.tutorial;
 
-import com.staxrt.tutorial.model.User;
+import com.example.tutorial.model.User;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
