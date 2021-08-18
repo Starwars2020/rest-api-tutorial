@@ -1,8 +1,8 @@
 package com.example.tutorial.controller;
 
-import com.staxrt.tutorial.exception.ResourceNotFoundException;
-import com.staxrt.tutorial.model.User;
-import com.staxrt.tutorial.repository.UserRepository;
+import com.example.tutorial.exception.ResourceNotFoundException;
+import com.example.tutorial.model.User;
+import com.example.tutorial.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

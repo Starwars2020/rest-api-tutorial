@@ -1,6 +1,6 @@
 package com.example.tutorial.repository;
 
-import com.staxrt.tutorial.model.User;
+import com.example.tutorial.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
