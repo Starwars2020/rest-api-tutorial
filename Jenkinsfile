@@ -52,9 +52,9 @@ podTemplate(
 		
         stage('Run kubectl') {
             container('kubectl') {
-                sh "kubectl apply -f rest-sample-app-deployment.yaml -n ${nameSpace}"
-                sh "kubectl apply -f rest-sample-app-service.yaml -n ${nameSpace}"
-                sh "kubectl apply -f rest-sample-app-ingress.yaml -n ${nameSpace}"
+                sh "kubectl apply -f rest-api-tutorial-deployment.yaml -n ${nameSpace}"
+                sh "kubectl apply -f rest-api-tutorial-service.yaml -n ${nameSpace}"
+                sh "kubectl apply -f rest-api-tutorial-ingress.yaml -n ${nameSpace}"
             }
         }
     }
