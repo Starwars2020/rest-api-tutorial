@@ -54,7 +54,7 @@ podTemplate(
             container('kubectl') {
                 sh "kubectl apply -f rest-api-tutorial-deployment.yaml -n ${nameSpace}"
                 sh "kubectl apply -f rest-api-tutorial-service.yaml -n ${nameSpace}"
-                sh "kubectl apply -f rest-api-tutorial-ingress.yaml -n ${nameSpace} --validate=false"
+                sh "kubectl apply -f rest-api-tutorial-ingress.yaml -n ${nameSpace}"
             }
         }
     }
