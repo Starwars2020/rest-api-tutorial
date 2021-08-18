@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rest-api-tutorial
+  namespace: default
+  labels:
+    app: rest-api-tutorial
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rest-api-tutorial
+  template:
+    metadata:
+      labels:
+        app: rest-api-tutorial
+    spec:
+      containers:
+      - name: rest-api-tutorial
+        image: localhost:5000/rest-api-tutorial:1.0
+        ports:
+        - containerPort: 8080

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rest-api-tutorial
+  namespace: default
+  labels:
+    app: rest-api-tutorial
+spec:
+  selector:
+    app: rest-api-tutorial
+  ports:
+    - protocol: TCP
+      port: 8080
+      #nodePort: 30074
+  type: NodePort
