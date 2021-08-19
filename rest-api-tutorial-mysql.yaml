@@ -15,7 +15,7 @@ metadata:
  name: mysql-svc
 subsets:
  - addresses:
-   - ip: 10.96.0.1
+   - ip: 10.109.69.182
    ports:
    - port: 3306
      name: mysql-svc
