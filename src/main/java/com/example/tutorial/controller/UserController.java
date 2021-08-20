@@ -1,6 +1,5 @@
 package com.example.tutorial.controller;
 
-import com.example.tutorial.exception.ResourceNotFoundException;
 import com.example.tutorial.model.User;
 import com.example.tutorial.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
