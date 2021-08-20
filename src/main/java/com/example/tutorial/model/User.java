@@ -18,10 +18,10 @@ import java.util.Date;
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id", nullable = false)
     private long id;
 
-    @Column(name = "name", nullable = false)
+    @Column(name = "name", nullable = true)
     private String name;
 
     //@Column(name = "last_name", nullable = false)
@@ -112,13 +112,13 @@ public class User {
   //      this.updatedBy = updatedBy;
   //  }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
-    }
+    //@Override
+    //public String toString() {
+    //    return "User{" +
+    //            "id=" + id +
+    //            ", name='" + name + '\'' +
+    //            '}';
+    //}
 
     //@Override
     //public String toString() {
