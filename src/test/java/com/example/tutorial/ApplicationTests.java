@@ -28,11 +28,4 @@ public class ApplicationTests {
 				.andExpect(jsonPath("$.content").value(""));
 	}
 
-	@Test
-	public void noParamGreetingShouldReturnDefaultMessage() throws Exception {
-
-		this.mockMvc.perform(get("/1")).andDo(print()).andExpect(status().isOk())
-				.andExpect(jsonPath("$.content").value(""));
-	}
-
 }
