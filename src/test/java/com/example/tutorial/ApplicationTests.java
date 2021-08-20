@@ -35,7 +35,7 @@ public class ApplicationTests {
 		HttpHeaders headers = new HttpHeaders();
 		HttpEntity<String> entity = new HttpEntity<String>(null, headers);
 
-		ResponseEntity<String> response = restTemplate.exchange(getRootUrl() + "/users",
+		ResponseEntity<String> response = restTemplate.exchange(getRootUrl() + "/api/user",
 				HttpMethod.GET, entity, String.class);
 
 		Assert.assertNotNull(response.getBody());
@@ -43,7 +43,7 @@ public class ApplicationTests {
 
 	@Test
 	public void testGetUserById() {
-		User user = restTemplate.getForObject(getRootUrl() + "/users/1", User.class);
+		User user = restTemplate.getForObject(getRootUrl() + "/api/user/{1}", User.class);
 		System.out.println(user.getName());
 		Assert.assertNotNull(user);
 	}
