@@ -1,18 +1,15 @@
 package com.example.tutorial;
 
 import com.example.tutorial.model.User;
-//import org.junit.Test;
-//import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.boot.web.server.LocalServerPort;
-import org.springframework.http.*;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.web.client.HttpClientErrorException;
+//import org.springframework.boot.test.context.SpringBootTest;
+//import org.springframework.boot.test.web.client.TestRestTemplate;
+//import org.springframework.boot.web.server.LocalServerPort;
+//import org.springframework.http.*;
+//import org.springframework.test.context.junit4.SpringRunner;
+import org.junit.jupiter.api.Test;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = Application.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest
 public class ApplicationTests {
 
 	@Autowired
@@ -46,15 +43,5 @@ public class ApplicationTests {
 		System.out.println(user.getName());
 		Assert.assertNotNull(user);
 	}
-
-	//@Test
-	//public void testCreateUser() {
-	//	User user = new User();
-	//	user.setName("admin");
-
-	//	ResponseEntity<User> postResponse = restTemplate.postForEntity(getRootUrl() + "/api/user", user, User.class);
-	//	Assert.assertNotNull(postResponse);
-	//	Assert.assertNotNull(postResponse.getBody());
-	//}
 
 }
