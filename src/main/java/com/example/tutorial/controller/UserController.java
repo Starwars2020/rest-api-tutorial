@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Validated;
+import javax.validation.Valid;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -36,7 +36,7 @@ public class UserController {
   }
 
   @PostMapping
-  public User saveUser(@Validated @RequestBody User user) {
+  public User saveUser(@Valid @RequestBody User user) {
     return userRepository.save(user);
   }
 
