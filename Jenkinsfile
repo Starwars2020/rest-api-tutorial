@@ -55,7 +55,6 @@ podTemplate(
                 sh "kubectl apply -f rest-api-tutorial-deployment.yaml -n ${nameSpace}"
                 sh "kubectl apply -f rest-api-tutorial-service.yaml -n ${nameSpace}"
                 sh "kubectl apply -f rest-api-tutorial-ingress.yaml -n ${nameSpace}"
-                sh "kubectl apply -f rest-api-tutorial-mysql.yaml -n ${nameSpace}"
             }
         }
     }
