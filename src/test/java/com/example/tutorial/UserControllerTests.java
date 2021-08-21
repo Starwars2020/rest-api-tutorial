@@ -20,14 +20,12 @@ public class UserControllerTests {
   private MockMvc mvc;
 
   @Test
-  public void addNewUser() throws Exception {
-    String name = "John";
-    String email = "example@example.com";
+  public void testgetAllUsers() throws Exception {
+    String name = "demo";
   
-    mvc.perform(get("/demo/add"))
+    mvc.perform(get("/demo/all"))
             .andExpect(status().isOk())
-            .andExpect(content().string(name))
-            .andExpect(content().string(email));
+            .andExpect(content().string(name));
   }
   
   //@Test
