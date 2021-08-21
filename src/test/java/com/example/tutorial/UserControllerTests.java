@@ -20,7 +20,7 @@ public class UserControllerTests {
   private MockMvc mvc;
 
   @Test
-  public void user_to_return() throws Exception {
+  public void user_return() throws Exception {
     String user = "demo";
   
     mvc.perform(get("/demo"))
@@ -29,7 +29,7 @@ public class UserControllerTests {
   }
   
   //@Test
-  //public void userAll_to_return() throws Exception {
+  //public void userAll_return() throws Exception {
   //  String name = "demo";
   //  int amount = 1000;
   //
