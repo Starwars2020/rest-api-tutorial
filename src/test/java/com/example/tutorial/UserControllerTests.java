@@ -19,12 +19,12 @@ public class UserControllerTests {
 	@Autowired
 	private MockMvc mockMvc;
 
-	@Test
-	public void noParamGreetingShouldReturnDefaultMessage() throws Exception {
-
-		this.mockMvc.perform(get("/demo/all")).andDo(print()).andExpect(status().isOk())
-				.andExpect(jsonPath("$.content").value(""));
-	}
+	//@Test
+	//public void noParamGreetingShouldReturnDefaultMessage() throws Exception {
+  //
+	//	this.mockMvc.perform(get("/demo/all")).andDo(print()).andExpect(status().isOk())
+	//			.andExpect(jsonPath("$.content").value(""));
+	//}
 
 	//@Test
 	//public void paramGreetingShouldReturnTailoredMessage() throws Exception {
