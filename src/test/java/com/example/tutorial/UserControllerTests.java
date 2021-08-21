@@ -20,7 +20,7 @@ public class UserControllerTests {
   private MockMvc mvc;
 
   @Test
-  public void user_return() throws Exception {
+  public void getAllUsers() throws Exception {
     String user = "demo";
   
     mvc.perform(get("/demo"))
