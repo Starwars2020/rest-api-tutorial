@@ -1,137 +1,41 @@
 package com.example.tutorial.model;
 
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.data.annotation.CreatedBy;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedBy;
-import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-import javax.persistence.*;
-
-import java.util.Date;
-
-@Entity
-@Table(name = "users")
-@EntityListeners(AuditingEntityListener.class)
+@Entity // This tells Hibernate to make a table out of this class
 public class User {
+  @Id
+  @GeneratedValue(strategy=GenerationType.AUTO)
+  private Integer id;
 
-    @Id
-    @Column(name = "id", nullable = false)
-    private long id;
+  private String name;
 
-    @Column(name = "name", nullable = true)
-    private String name;
+  private String email;
 
-    //@Column(name = "last_name", nullable = false)
-    //private String lastName;
-    //
-    //@Column(name = "email_address", nullable = false)
-    //private String email;
-    //
-    //@CreationTimestamp
-    //@Temporal(TemporalType.TIMESTAMP)
-    //@Column(name = "created_at", nullable = false)
-    //private Date createdAt;
-    //
-    //@Column(name = "created_by", nullable = false)
-    //@CreatedBy
-    //private String createdBy;
-    //
-    //@UpdateTimestamp
-    //@Temporal(TemporalType.TIMESTAMP)
-    //@Column(name = "updated_at", nullable = false)
-    //private Date updatedAt;
-    //
-    //@Column(name = "updated_by", nullable = false)
-    //@LastModifiedBy
-    //private String updatedBy;
+  public Integer getId() {
+    return id;
+  }
 
-  public long getId() {
-        return id;
-    }
-
-  public void setId(long id) {
-        this.id = id;
-    }
+  public void setId(Integer id) {
+    this.id = id;
+  }
 
   public String getName() {
-        return name;
-    }
+    return name;
+  }
 
   public void setName(String name) {
-        this.name = name;
-    }
+    this.name = name;
+  }
 
-  //public String getLastName() {
-  //      return lastName;
-  //  }
-  //
-  //public void setLastName(String lastName) {
-  //      this.lastName = lastName;
-  //  }
-  //
-  //public String getEmail() {
-  //      return email;
-  //  }
-  //
-  //public void setEmail(String email) {
-  //      this.email = email;
-  //  }
-  //
-  //public Date getCreatedAt() {
-  //      return createdAt;
-  //  }
-  //
-  //public void setCreatedAt(Date createdAt) {
-  //      this.createdAt = createdAt;
-  //  }
-  //
-  //public String getCreatedBy() {
-  //      return createdBy;
-  //  }
-  //
-  //public void setCreatedBy(String createdBy) {
-  //      this.createdBy = createdBy;
-  //  }
-  //
-  //public Date getUpdatedAt() {
-  //      return updatedAt;
-  //  }
-  //
-  //public void setUpdatedAt(Date updatedAt) {
-  //      this.updatedAt = updatedAt;
-  //  }
-  //
-  //public String getUpdatedBy() {
-  //      return updatedBy;
-  //  }
-  //
-  //public void setUpdatedBy(String updatedBy) {
-  //      this.updatedBy = updatedBy;
-  //  }
+  public String getEmail() {
+    return email;
+  }
 
-    //@Override
-    //public String toString() {
-    //    return "User{" +
-    //            "id=" + id +
-    //            ", name='" + name + '\'' +
-    //            '}';
-    //}
-
-    //@Override
-    //public String toString() {
-    //    return "User{" +
-    //            "id=" + id +
-    //            ", firstName='" + firstName + '\'' +
-    //            ", lastName='" + lastName + '\'' +
-    //            ", email='" + email + '\'' +
-    //            ", createdAt=" + createdAt +
-    //            ", createdBy='" + createdBy + '\'' +
-    //            ", updatedAt=" + updatedAt +
-    //            ", updatedby='" + updatedBy + '\'' +
-    //            '}';
-    //}
-
+  public void setEmail(String email) {
+    this.email = email;
+  }
 }
