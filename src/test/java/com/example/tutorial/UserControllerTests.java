@@ -20,24 +20,26 @@ public class UserControllerTests {
   private MockMvc mvc;
 
   @Test
-  public void getAllUsers() throws Exception {
-    String user = "demo";
+  public void addNewUser() throws Exception {
+    String name = "John";
+    String email = "example@example.com";
   
-    mvc.perform(get("/demo"))
+    mvc.perform(get("/demo/add"))
             .andExpect(status().isOk())
-            .andExpect(content().string(user));
+            .andExpect(content().string(name))
+            .andExpect(content().string(email));
   }
   
   //@Test
-  //public void userAll_return() throws Exception {
-  //  String name = "demo";
-  //  int amount = 1000;
+  //public void getAllUsers() throws Exception {
+  //  String name = "John";
+  //  String email = "example@example.com";
   //
   //  mvc.perform(get("/demo/all")
   //  		.param("name", name)
   //  		.param("amount", String.valueOf(amount)))
   //          .andExpect(status().isOk())
   //          .andExpect(jsonPath("$.name", is(name)))
-  //          .andExpect(jsonPath("$.amount", is(amount)));
+  //          .andExpect(jsonPath("$.amount", is(email)));
   //}
 }
