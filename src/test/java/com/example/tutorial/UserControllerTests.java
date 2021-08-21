@@ -1,5 +1,6 @@
 package com.example.tutorial;
 
+import com.example.tutorial.controller.UserController;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
