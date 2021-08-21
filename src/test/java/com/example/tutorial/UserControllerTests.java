@@ -15,8 +15,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(controllers = HelloController.class)
 public class UserControllerTests {
 
-	@Autowired
-	private MockMvc mvc;
+  @Autowired
+  private MockMvc mvc;
 
   @Test
   public void user_to_return() throws Exception {
