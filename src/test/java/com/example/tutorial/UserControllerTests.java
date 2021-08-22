@@ -1,43 +1,37 @@
 package com.example.tutorial;
 
-import com.example.tutorial.controller.UserController;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static org.hamcrest.Matchers.is;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import com.example.tutorial.controller.UserController;
 
-@ExtendWith(SpringExtension.class)
-@WebMvcTest(controllers = UserController.class)
+@SpringBootTest
+@AutoConfigureMockMvc
 public class UserControllerTests {
 
   @Autowired
   private MockMvc mvc;
 
   @Test
-  public void testgetAllUsers() throws Exception {
-    String name = "demo";
-  
+  public void getAllUsersAPI() throws Exception {
     mvc.perform(get("/demo/all"))
-            .andExpect(status().isOk())
-            .andExpect(content().string(name));
+            .andDo(print()).andExpect(status().isOk())
+            .andExpect(jsonPath("$.content").value("Saved"));
   }
   
   //@Test
-  //public void getAllUsers() throws Exception {
-  //  String name = "John";
-  //  String email = "example@example.com";
-  //
-  //  mvc.perform(get("/demo/all")
-  //  		.param("name", name)
-  //  		.param("amount", String.valueOf(amount)))
+  //public void addNewUserAPI() throws Exception {
+  //  mvc.perform(get("/demo/add", "John","example@example.com"))
   //          .andExpect(status().isOk())
-  //          .andExpect(jsonPath("$.name", is(name)))
-  //          .andExpect(jsonPath("$.amount", is(email)));
+  //          .andExpect(jsonPath("$.message").value(""));
   //}
 }
