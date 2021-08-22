@@ -30,7 +30,7 @@ podTemplate(
         stage('Build a gradle project'){
             container('gradle'){
                 sh 'chmod 755 gradlew'
-                sh './gradlew clean build'
+                sh './gradlew clean build --exclude-task test'
             }
         }
 
