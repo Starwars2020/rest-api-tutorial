@@ -24,8 +24,8 @@ public class UserControllerTests {
 
   @Test
   public void getAllUsersAPI() throws Exception {
-    mvc.perform(get("/demo/all"))
-            .andDo(print()).andExpect(status().isOk());
+    this.mvc.perform(get("/demo/all")).andDo(print()).andExpect(status().isOk())
+            .andExpect(content().string(containsString("")));
   }
   
   //@Test
