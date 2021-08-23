@@ -5,13 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.2.RELEASE</version>
+		<version>2.5.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
 	<groupId>com.example.tutorial</groupId>
 	<artifactId>rest-api-tutorial</artifactId>
 	<version>0.1.0</version>
+	<packaging>jar</packaging>
 	<name>rest-api-tutorial</name>
 	<description>Sample REST CRUD API project using Spring Boot, Mysql, JPA and Hibernate</description>
 
