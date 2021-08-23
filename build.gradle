@@ -18,7 +18,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.springframework.boot:spring-boot-devtools'
-	implementation 'mysql:mysql-connector-java:5.6'
+	implementation 'mysql:mysql-connector-java'
 	implementation 'junit:junit:4.12'
 	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
